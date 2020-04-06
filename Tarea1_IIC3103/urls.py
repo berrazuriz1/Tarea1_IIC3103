@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from RMapp.views import home, episode_view, character_view, location_view, searchBar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home),
+    path('episodio/<int:id_episodio>', episode_view, name='episode'),
+    path('caracter/<int:id_character>', character_view, name='character'),
+    path('lugar/<int:id_lugar>', location_view, name='location'),
+    path('search/', searchBar, name='search')
 ]
