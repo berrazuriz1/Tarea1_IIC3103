@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'Tarea1_IIC3103.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_pyscopg2',
-        'NAME': 'Tarea1Tarea1_IIC3103',
-        'User': 'berrazuriz1',
-        'Password': 'ezvcg059',
-        'HOST': 'localhost',
-        'Port': 5432,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
